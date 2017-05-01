@@ -5,8 +5,10 @@ import statistics.Player;
 
 public class PlaysIn implements Matcher {
     private String team;
+    private Matcher match;
 
-    public PlaysIn(String team) {
+    public PlaysIn(Matcher match, String team) {
+        this.match = match;
         this.team = team;
     }        
     

@@ -8,9 +8,10 @@ public class HasAtLeast implements Matcher {
     
     private int value;
     private String fieldName;
-
-    public HasAtLeast(int value, String category) {
+    private Matcher match;
+    public HasAtLeast(Matcher matcher, int value, String category) {
         this.value = value;
+        this.match = matcher;
         fieldName = "get"+Character.toUpperCase(category.charAt(0))+category.substring(1, category.length());
     }
 
