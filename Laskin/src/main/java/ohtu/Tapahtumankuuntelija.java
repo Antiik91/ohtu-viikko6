@@ -39,7 +39,8 @@ public class Tapahtumankuuntelija implements ActionListener {
             op.suorita();
             edellinen = op;
         } else {
-            
+            edellinen.peru();
+            edellinen = null;
         }
         nollaa.setEnabled(sovellus.tulos() != 0);
         undo.setEnabled(edellinen!=null);

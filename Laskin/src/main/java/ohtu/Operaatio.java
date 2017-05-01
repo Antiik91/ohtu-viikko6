@@ -18,6 +18,7 @@ public abstract class Operaatio {
     private JTextField tulos;
     private Sovelluslogiikka sl;
 
+
     public Operaatio(Sovelluslogiikka sl,JTextField syote, JTextField tulos) {
         this.syote = syote;
         this.tulos = tulos;
@@ -25,12 +26,7 @@ public abstract class Operaatio {
 
     }
 
-    public static Operaatio luo(String op, int luku1) {
-        if (op.equals("summa")) {
-//            return sl.plus(luku1);
-        }
-        return null;
-    }
     public abstract void suorita();
+    public abstract void peru();
 }
 
